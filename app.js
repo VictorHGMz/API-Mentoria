@@ -4,7 +4,7 @@ const port = 3000
 const client = require('./db/database')
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true}))
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
