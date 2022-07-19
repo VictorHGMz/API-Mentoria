@@ -1,4 +1,12 @@
-const client = require('./config');
+const { Client } = require('pg');
+
+const client = new Client({
+    host: 'localhost',
+    port: 5432,
+    user: 'postgres',
+    password: '1234',
+    database: 'app_mentoria'
+});
 
 client.connect(err => {
     if (err) {
@@ -8,4 +16,4 @@ client.connect(err => {
     }
 });
 
-module.exports = client;
+module.exports = client
